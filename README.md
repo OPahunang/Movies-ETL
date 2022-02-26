@@ -31,3 +31,41 @@ The requirement is to create an automated pipeline that takes in new data, perfo
 ![delivery1_ratings_dataframe.png](https://github.com/OPahunang/Movies-ETL/blob/main/Resources/delivery1_ratings_dataframe.png)
 
 
+### Deliverable 2: Extract and Transform the Wikipedia Data
+
+-	The TV shows are filtered out, and the wiki_movies_df DataFrame is created.
+
+![delivery2_TV_shows_filtered_out.png](https://github.com/OPahunang/Movies-ETL/blob/main/Resources/delivery2_TV_shows_filtered_out.png)
+
+
+-	A try-except block is used to catch errors while extracting the IMDb IDs with a regular expression and dropping duplicate IDs.
+
+![delivery2_try_except.png](https://github.com/OPahunang/Movies-ETL/blob/main/Resources/delivery2_try_except.png)
+
+
+-	The extraction and transformation of the Wikipedia data in the ETL function does the following:
+
+	  1) A list comprehension is used to keep columns with non-null values. 
+    2) The non-null box office data is converted to string values using the lambda and join functions.
+    3) A regular expression is used to match the six elements of "form_one" of the box office data.
+    4) A regular expression is used to match the three elements of "form_two" of the box office data.
+    5) The following columns are cleaned in the Wikipedia DataFrame: 
+  
+        - The box office column
+        - The budget column
+        - The release date column
+        - The running time column
+
+
+![delivery2_extraction_transformation.png](https://github.com/OPahunang/Movies-ETL/blob/main/Resources/delivery2_extraction_transformation.png)
+
+
+-	The cleaned Wikipedia data is converted to a Pandas DataFrame, and the DataFrame is displayed in the ETL_clean_wiki_movies.ipynb file.
+
+![delivery2_wiki_movies_dataframe.png](https://github.com/OPahunang/Movies-ETL/blob/main/Resources/delivery2_wiki_movies_dataframe.png)
+
+
+![delivery2_wiki_movies_columns.png](https://github.com/OPahunang/Movies-ETL/blob/main/Resources/delivery2_wiki_movies_columns.png)
+
+
+
